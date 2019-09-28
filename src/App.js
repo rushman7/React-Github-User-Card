@@ -13,7 +13,10 @@ class App extends Component {
   componentDidMount() {
     axios
       .get('https://api.github.com/users/rushman7')
-      .then(res => console.log(res.data))
+      .then(res => {
+        this.setState({ users: [...this.state.users, res.data] })
+        console.log(this.state.users)
+      })
       .catch(err => console.log('Error: ', err))
   }
 
