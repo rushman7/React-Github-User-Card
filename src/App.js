@@ -23,7 +23,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        React App
+        {this.state.users.map(user => <p key={user.id}>{user.name}</p>)}
       </div>
     );
   }
