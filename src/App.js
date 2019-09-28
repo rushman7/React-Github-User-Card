@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import UserCard from './components/UserCard';
 import './App.css';
 
 class App extends Component {
@@ -23,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.users.map(user => <p key={user.id}>{user.name}</p>)}
+        <UserCard />
       </div>
     );
   }
