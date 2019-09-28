@@ -24,7 +24,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <UserCard />
+        <h2>GitHub User Cards</h2>
+        {this.state.users.map(user => <UserCard key={user.id} data={user}/>)}
       </div>
     );
   }

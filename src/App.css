@@ -1,3 +1,10 @@
 .App {
   text-align: center;
+  width: 80%;
+  margin: auto;
 }
+
+.App h2{
+  margin-bottom: 40px;
+}
+
