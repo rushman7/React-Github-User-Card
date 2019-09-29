@@ -4,7 +4,13 @@
   margin: auto;
 }
 
-.App h2{
+.title{
   margin-bottom: 40px;
+  color: white;
 }
 
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

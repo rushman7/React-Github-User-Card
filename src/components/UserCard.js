@@ -2,25 +2,23 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: 345,
-    margin: 10
+    width: 345,
+    margin: 15
   },
   media: {
     height: 320,
-  },
+  }
 });
 
 export default function UserCard(props) {
   const classes = useStyles();
-  const {name, bio, avatar_url, login, blog, location} = props.data;
+  const {avatar_url, login} = props.data;
 
   return (
     <Card className={classes.card}>
@@ -32,23 +30,13 @@ export default function UserCard(props) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {name}
+            {login} 
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Occupation: {bio} <br /> 
-            Location: {location} <br />
-            Contact: {blog}
+            A Software Engineer at Lambda School learning JS Web Development.
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
     </Card>
   )
 }
