@@ -30,9 +30,6 @@ export default function UserCard(props) {
           title={login}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {login} 
-          </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             A Software Engineer at Lambda School learning JS Web Development.
           </Typography>
