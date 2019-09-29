@@ -5,6 +5,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import GitHubCalendar from 'react-github-calendar'
 
 const useStyles = makeStyles({
   card: {
@@ -36,6 +37,10 @@ export default function UserCard(props) {
             A Software Engineer at Lambda School learning JS Web Development.
           </Typography>
         </CardContent>
+        <GitHubCalendar 
+          username={login} 
+          fullYear={true}
+        />
       </CardActionArea>
     </Card>
   )

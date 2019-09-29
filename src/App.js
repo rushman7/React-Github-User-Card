@@ -22,18 +22,14 @@ class App extends Component {
       })
       .catch(err => console.log('Error: ', err))
 
-    axios
-      .get('https://api.github.com/users/rushman7/followers')
-      .then(res => {
-        res.data.map(user => this.setState({ users: [...this.state.users, user] }))
-      })
-      .catch(err => console.log('Error: ', err))
+    // axios
+    //   .get('https://api.github.com/users/rushman7/followers')
+    //   .then(res => {
+    //     res.data.map(user => this.setState({ users: [...this.state.users, user] }))
+    //   })
+    //   .catch(err => console.log('Error: ', err))
   }
-
-  // onSearch() {
-  //   const filtered = this.state.users.filter(userName => userName.login.indexOf(pokeSearch) !== -1)
-  // }
-
+  
   filterOnChange = (e) => {
     this.setState({ search: e.target.value })
   }
